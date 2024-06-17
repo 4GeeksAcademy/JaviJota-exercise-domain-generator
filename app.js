@@ -27,3 +27,5 @@ function printRandomDomainList () {
 };
 
 printRandomDomainList();
+
+console.log(getRandomDomain())

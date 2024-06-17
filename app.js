@@ -1,10 +1,8 @@
-let pronoun = ['the', 'our'];
-let adj = ['great', 'big'];
-let noun = ['jogger', 'racoon'];
-let domain = ['.com', '.net', '.es', '.org'];
-const domainContainer = document.querySelector('.domain-list');
-
 function getRandomDomain(){
+    let pronoun = ['the', 'our'];
+    let adj = ['great', 'big'];
+    let noun = ['jogger', 'racoon'];
+    let domain = ['.com', '.net', '.es', '.org'];
     let randomDomainsArr = []
     for(let pronouns of pronoun){
         let randomDomain = '';
@@ -16,12 +14,16 @@ function getRandomDomain(){
                         randomDomainsArr.push(randomDomain);
                     }
                     else randomDomainsArr.push('<br>' + randomDomain);
-                }
-            }
-        }
-    }
+                };
+            };
+        };
+    };
     return randomDomainsArr
-}
-domainContainer.innerHTML = getRandomDomain();
+};
 
-console.log(getRandomDomain());
+function printRandomDomainList () {
+    const domainContainer = document.querySelector('.domain-list');
+    domainContainer.innerHTML = getRandomDomain();
+};
+
+printRandomDomainList();
